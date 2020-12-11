@@ -28,7 +28,7 @@ async function getAddToCartButton(page) {
 
 async function getPage() {
   const browser = await puppeteer.launch({
-    args: ["--no-sandbox"],
+    args: ["--no-sandbox", "--window-size=1920,1080"],
   });
   const page = await browser.newPage();
   await page.goto(
