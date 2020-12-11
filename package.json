@@ -4,8 +4,14 @@
   "main": "index.js",
   "author": "Ryan",
   "license": "MIT",
+  "scripts": {
+    "start": "./node_modules/.bin/pm2 start server.js",
+    "stop": "./node_modules/.bin/pm2 stop server.js",
+    "dash": "./node_modules/.bin/pm2 dash"
+  },
   "dependencies": {
     "express": "^4.17.1",
+    "pm2": "^4.5.0",
     "request": "^2.88.2"
   }
 }
