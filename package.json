@@ -1,0 +1,11 @@
+{
+  "name": "ps5-status",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ryan",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "puppeteer": "^5.5.0"
+  }
+}
