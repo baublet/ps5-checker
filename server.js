@@ -1,7 +1,11 @@
 const express = require("express");
 const app = express();
 const port = 3000;
-const puppeteer = require("puppeteer");
+const puppeteer = require('puppeteer-extra')
+
+// add stealth plugin and use defaults (all evasion techniques)
+const StealthPlugin = require('puppeteer-extra-plugin-stealth')
+puppeteer.use(StealthPlugin())
 
 async function getAddToCartButton(page) {
   try {
@@ -31,6 +35,8 @@ async function getPage() {
     args: ["--no-sandbox", "--window-size=1920,1080"],
   });
   const page = await browser.newPage();
+
+
   await page.goto(
     "https://direct.playstation.com/en-us/consoles/console/playstation5-console.3005816"
   );
